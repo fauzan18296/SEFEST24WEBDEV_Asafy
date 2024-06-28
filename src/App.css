@@ -65,15 +65,12 @@ body {
 }
 
 .bg-about {
-  background-color: #393E46;
-  width: 100%;
-  height: 100vh;
+  background-color: #2C3639;
+  max-width: 100%;
+  min-height: 100vh;
 } 
 
 .img-container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   min-height: 100vh;
   width: 100%;
   color: #222831;
@@ -95,4 +92,74 @@ body {
 
 .img-wrapper p span {
   color: greenyellow;
+}
+
+.img-wrapper a{
+  margin: 0 auto;
+  padding: 0 6px;
+  color: greenyellow;
+}
+
+#image-about-abiyan {
+  animation: Abiyan 3.5s;
+  animation-delay: 1.4s;
+  animation-fill-mode:both;
+}
+@keyframes Abiyan {
+  0%{
+    transform: translateX(-60%);
+    opacity: 0;
+  }
+   50%{
+    transform: translateX(10%);
+    opacity: 1;
+  }
+}
+
+
+
+
+.bg-comment {
+  background-color:#2C3639;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.bg-comment .bg-form-container{
+  background-color: #F9F9F9;
+  border-radius: 10px;
+ width: 28%;
+}
+
+.bg-comment label {
+  color: #222831;
+  font-weight: bold;
+}
+
+.bg-comment .btn-comment {
+  border-radius: 10px;
+  color: #F9F9F9;
+}
+
+/* Media Laptop */
+@media screen and (max-width: 1366px){
+  html{
+    font-size: large;
+  }
+}
+
+/* Media Mobile */
+@media screen and (max-width:576px){
+  html {
+    font-size: small;
+  }
+  .img-wrapper img{
+    margin-top: 50px;
+    width: 66%;
+  }
+  .bg-comment .bg-form-container{
+    background-color: #F9F9F9;
+    border-radius: 10px;
+   width: 50%;
+  }
 }

@@ -1,10 +1,10 @@
-import Comment from '../Components/Comment'
 import Navigation from '../Components/Nav'
+import Comment from '../Components/Comment'
 
 const CommentPage = () => {
   return(
     <>
-     <Navigation/>
+    <Navigation/>
     <Comment/>
     </>
   )
