@@ -92,12 +92,12 @@ const About = () => {
       </a>
       </div>
       <div id="icon-yosafat-2">
-      <a href="https://github.com/fauzan18296">
+      <a href="https://github.com/Razelavier22">
       <FontAwesomeIcon icon={faSquareGithub} size="2xl" />
       </a>
       </div>
       <div id="icon-yosafat-3">
-      <a href="https://web.facebook.com/profile.php?id=100034570607256">
+      <a href="https://www.facebook.com/yosafat.yosafat.12935?mibextid=ZbWKwL">
       <FontAwesomeIcon icon={faSquareFacebook} size="2xl"/>
       </a>
       </div>
