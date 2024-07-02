@@ -15,12 +15,7 @@ export default function App() {
       <Routes>
         <Route path='/' element= {<HomePage/>}/>
         <Route path='/about' element={<AboutPage/>}/>
-        <Route path='/comment' element={<CommentPage onAlert= {handleAppAlert}/>} />
-        {appAlert && (
-            <div>
-              {appAlert}
-              </div>
-          )}
+        <Route path='/comment' element={<CommentPage onAlert= {handleAppAlert} message={appAlert}/>} />
         <Route path='/product'element={<ProductPage/>}/>
         </Routes>
     </Router>
