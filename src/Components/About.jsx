@@ -87,7 +87,7 @@ const About = () => {
       {/* Icon Sosmed */}
       <div className="d-flex align-items-center">
       <div id="icon-yosafat-1">
-       <a href="https://www.instagram.com/ahd_fauzan18/?next=%2F&hl=id">
+       <a href="https://www.instagram.com/invites/contact/?igsh=1rg9lzq7ghynh&utm_content=hsx3so1">
       <FontAwesomeIcon icon={faSquareInstagram} size="2xl" />
       </a>
       </div>

@@ -242,6 +242,51 @@ body {
     opacity: 3;
   }
 }
+#icon-yosafat-1 {
+  animation: icon-yosafat-1 4.0s;
+  animation-delay: 2.4s;
+  animation-fill-mode:both;
+}
+@keyframes icon-yosafat-1 {
+  0%{
+    transform: translateX(35%);
+    opacity: 0;
+  }
+   50%{
+    transform: translateX(-6%);
+    opacity: 3;
+  }
+}
+#icon-yosafat-2 {
+  animation: icon-yosafat-2 4.4s;
+  animation-delay: 2.6s;
+  animation-fill-mode:both;
+}
+@keyframes icon-yosafat-2 {
+  0%{
+    transform: translateX(35%);
+    opacity: 0;
+  }
+   50%{
+    transform: translateX(-6%);
+    opacity: 3;
+  }
+}
+#icon-yosafat-3 {
+  animation: icon-yosafat-3 4.8s;
+  animation-delay: 2.8s;
+  animation-fill-mode:both;
+}
+@keyframes icon-yosafat-3 {
+  0%{
+    transform: translateX(35%);
+    opacity: 0;
+  }
+   50%{
+    transform: translateX(-6%);
+    opacity: 3;
+  }
+}
 
 .bg-comment {
   background-color:#222831;
@@ -263,6 +308,11 @@ body {
 .bg-comment .btn-comment {
   border-radius: 10px;
   color: #F9F9F9;
+}
+
+.bg-comment .closeAlert {
+  cursor: pointer;
+  color: red;
 }
 
 /* Media Laptop */
@@ -288,6 +338,4 @@ body {
   border-radius: 10px;
    width: 80%;
   }
-
-
 }

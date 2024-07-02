@@ -1,4 +1,4 @@
-import {Container,Row,Col} from "react-bootstrap";
+import {Container,Row,Col, Alert} from "react-bootstrap";
 import {useState} from 'react'
 import axios from "axios";
 
@@ -6,6 +6,9 @@ const Comment = () => {
   const [username, setUsername] = useState('')
   const [nickname, setNickname] = useState('')
   const [comment, setComment] = useState('')
+  const [alertMessage, setAlertMessage] = useState('')
+  const [showAlert, setShowAlert] = useState(false)
+
   const sendComment = (e) => {
     e.preventDefault()
  axios.post('http://localhost:3000/comment', {
@@ -15,9 +18,15 @@ const Comment = () => {
 }).then((result) => {
   console.log(result)
 }).then(() => {
-  alert('Komentar telah berhasil dikirim!')
+  setAlertMessage('Komentar telah berhasil dikirim!')
+  setShowAlert(true)
 })
 }
+const handleAlertClose = () =>{
+    setShowAlert(false)  
+}
+
+
 
   return (
     <div className="bg-comment d-flex justify-content-center align-items-center">
@@ -25,6 +34,13 @@ const Comment = () => {
     <Row className="d-flex justify-content-center align-items-center pb-4 row-cols-lg-5 row-cols-2">
       <Col className="d-flex justify-content-center align-items-center pt-4">
       <form  action="/comment" method="post">
+
+      {/* Alert saat form udah terisi dan dikirim */}
+      {showAlert && (
+    <Alert className="d-flex align-items-center" variant="success"><span className="closeAlert d-flex align-items-center fs-2 pe-2 fw-semibold" onClick={handleAlertClose}>&times;</span>{alertMessage}</Alert>
+   )} 
+   {/* end Alert saat form udah terisi dan dikirim */}
+
       <label htmlFor="username">Username:</label>
       <input type="text" name="username" className="username mb-2" placeholder="your username" value={username} onChange={(e) => setUsername(e.target.value)}/>
       <label htmlFor="nickname">Nickname:</label>
@@ -35,7 +51,7 @@ const Comment = () => {
       <button type="submit" onClick={sendComment}className="bg-success btn-comment px-4 py-1 fw-bold">Send</button>
       </form>
       </Col>
-    </Row>   
+    </Row>  
    </Container>
    </div>
   )
