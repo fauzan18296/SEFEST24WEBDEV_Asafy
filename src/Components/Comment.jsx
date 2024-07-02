@@ -2,7 +2,7 @@ import {Container,Row,Col, Alert} from "react-bootstrap";
 import {useState} from 'react'
 import axios from "axios";
 
-const Comment = () => {
+const Comment = ({onAlert}) => {
   const [username, setUsername] = useState('')
   const [nickname, setNickname] = useState('')
   const [comment, setComment] = useState('')
@@ -20,6 +20,7 @@ const Comment = () => {
 }).then(() => {
   setAlertMessage('Komentar telah berhasil dikirim!')
   setShowAlert(true)
+  onAlert(message)
 })
 }
 const handleAlertClose = () =>{
