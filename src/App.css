@@ -327,6 +327,11 @@ body {
   html {
     font-size: small;
   }
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
   .img-wrapper img{
     width: 66%;
   }

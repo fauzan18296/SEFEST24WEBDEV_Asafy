@@ -11,7 +11,7 @@ const Comment = () => {
 
   const sendComment = (e) => {
     e.preventDefault()
- axios.post('http://localhost:3000/comment', {
+  axios.post('http://localhost:3000/comment', {
   username: username,
   nickname: nickname,
   comment: comment,
@@ -20,6 +20,8 @@ const Comment = () => {
 }).then(() => {
   setAlertMessage('Komentar telah berhasil dikirim!')
   setShowAlert(true)
+}).catch((error) => {
+  console.error(`code error ${error}`)
 })
 }
 
@@ -32,7 +34,7 @@ const handleAlertClose = () => {
    <Container className="d-flex justify-content-center align-items-center bg-form-container">
     <Row className="d-flex justify-content-center align-items-center pb-4 row-cols-lg-5 row-cols-2">
       <Col className="d-flex justify-content-center align-items-center pt-4">
-      <form  action="/comment" method="post">
+      <form action="/comment" method="post">
       { 
       showAlert && (
           <Alert variant="success" className="d-flex align-items-center"><span className="d-flex align-items-center pe-2 fs-2 fw-semibold closeAlert" onClick={handleAlertClose}>&times;</span>{alertMessage}</Alert>
