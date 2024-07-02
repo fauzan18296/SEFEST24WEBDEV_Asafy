@@ -22,3 +22,4 @@ const AlertComp = ({message}) => {
    </>
 )
 }
+export default AlertComp

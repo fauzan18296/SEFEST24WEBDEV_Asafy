@@ -3,7 +3,7 @@ import HomePage from './Pages/HomePage'
 import AboutPage from './Pages/AboutPage'
 import CommentPage from './Pages/CommentPage'
 import ProductPage from './Pages/ProductPage'
-import Alert  from './Components/Alert'
+import AlertComp  from './Components/AlertComp'
 import { useState } from 'react';
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
         <Route path='/product'element={<ProductPage/>}/>
         </Routes>
         {appAlert && (
-          <Alert message={appAlert} />
+          <AlertComp message={appAlert} />
         )}
     </Router>
   )
