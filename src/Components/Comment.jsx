@@ -2,12 +2,10 @@ import {Container,Row,Col, Alert} from "react-bootstrap";
 import {useState} from 'react'
 import axios from "axios";
 
-const Comment = ({onAlert}) => {
+const Comment = ({ setAlertMessage }) => {
   const [username, setUsername] = useState('')
   const [nickname, setNickname] = useState('')
   const [comment, setComment] = useState('')
-  const [alertMessage, setAlertMessage] = useState('')
-  const [showAlert, setShowAlert] = useState(false)
 
   const sendComment = (e) => {
     e.preventDefault()
@@ -19,15 +17,8 @@ const Comment = ({onAlert}) => {
   console.log(result)
 }).then(() => {
   setAlertMessage('Komentar telah berhasil dikirim!')
-  setShowAlert(true)
-  onAlert(message)
 })
 }
-const handleAlertClose = () =>{
-    setShowAlert(false)  
-}
-
-
 
   return (
     <div className="bg-comment d-flex justify-content-center align-items-center">
@@ -35,13 +26,6 @@ const handleAlertClose = () =>{
     <Row className="d-flex justify-content-center align-items-center pb-4 row-cols-lg-5 row-cols-2">
       <Col className="d-flex justify-content-center align-items-center pt-4">
       <form  action="/comment" method="post">
-
-      {/* Alert saat form udah terisi dan dikirim */}
-      {showAlert && (
-    <Alert className="d-flex align-items-center" variant="success"><span className="closeAlert d-flex align-items-center fs-2 pe-2 fw-semibold" onClick={handleAlertClose}>&times;</span>{alertMessage}</Alert>
-   )} 
-   {/* end Alert saat form udah terisi dan dikirim */}
-
       <label htmlFor="username">Username:</label>
       <input type="text" name="username" className="username mb-2" placeholder="your username" value={username} onChange={(e) => setUsername(e.target.value)}/>
       <label htmlFor="nickname">Nickname:</label>

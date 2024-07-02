@@ -3,6 +3,7 @@ import HomePage from './Pages/HomePage'
 import AboutPage from './Pages/AboutPage'
 import CommentPage from './Pages/CommentPage'
 import ProductPage from './Pages/ProductPage'
+import Alert  from './Components/Alert'
 import { useState } from 'react';
 
 export default function App() {
@@ -15,9 +16,12 @@ export default function App() {
       <Routes>
         <Route path='/' element= {<HomePage/>}/>
         <Route path='/about' element={<AboutPage/>}/>
-        <Route path='/comment' element={<CommentPage onAlert= {handleAppAlert} message={appAlert}/>} />
+        <Route path='/comment' element={<CommentPage setAlertMessage={handleAppAlert}/>} />
         <Route path='/product'element={<ProductPage/>}/>
         </Routes>
+        {appAlert && (
+          <Alert message={appAlert} />
+        )}
     </Router>
   )
 }
