@@ -327,10 +327,6 @@ body {
   html {
     font-size: small;
   }
-.nav-links {
-  display: flex;
-  align-items: center;
-}
 
 .bg-about #icon {
   font-size: small;
