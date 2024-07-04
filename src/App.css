@@ -104,8 +104,8 @@ body {
 }
 
 #image-about-abiyan {
-  animation: Abiyan 3.5s;
-  animation-delay: 1.4s;
+  animation: Abiyan 3.2s;
+  animation-delay: 1.3s;
   animation-fill-mode:both;
 }
 @keyframes Abiyan {
@@ -120,8 +120,8 @@ body {
 }
 
 #icon-abiyan-1 {
-  animation: icon-abiyan-1 3.9s;
-  animation-delay: 2.6s;
+  animation: icon-abiyan-1 3.6s;
+  animation-delay: 2.5s;
   animation-fill-mode:both;
 }
 @keyframes icon-abiyan-1 {
@@ -135,8 +135,8 @@ body {
   }
 }
 #icon-abiyan-2 {
-  animation: icon-abiyan-2 4.3s;
-  animation-delay: 2.7s;
+  animation: icon-abiyan-2 4.0s;
+  animation-delay: 2.6s;
   animation-fill-mode:both;
 }
 @keyframes icon-abiyan-2 {
@@ -150,8 +150,8 @@ body {
   }
 }
 #icon-abiyan-3 {
-  animation: icon-abiyan-3 4.6s;
-  animation-delay: 2.8s;
+  animation: icon-abiyan-3 4.3s;
+  animation-delay: 2.7s;
   animation-fill-mode:both;
 }
 @keyframes icon-abiyan-3 {
@@ -166,8 +166,8 @@ body {
 }
 
 #image-about-fauzan {
-  animation: Fauzan 3.9s;
-  animation-delay: 1.8s;
+  animation: Fauzan 3.6s;
+  animation-delay: 1.7s;
   animation-fill-mode:both;
 }
 @keyframes Fauzan {
@@ -182,8 +182,8 @@ body {
 }
 
 #icon-fauzan-1 {
-  animation: icon-fauzan-1 4.0s;
-  animation-delay: 2.3s;
+  animation: icon-fauzan-1 3.7s;
+  animation-delay: 2.2s;
   animation-fill-mode:both;
 }
 @keyframes icon-fauzan-1 {
@@ -197,8 +197,8 @@ body {
   }
 }
 #icon-fauzan-2 {
-  animation: icon-fauzan-2 4.4s;
-  animation-delay: 2.5s;
+  animation: icon-fauzan-2 4.1s;
+  animation-delay: 2.4s;
   animation-fill-mode:both;
 }
 @keyframes icon-fauzan-2 {
@@ -212,8 +212,8 @@ body {
   }
 }
 #icon-fauzan-3 {
-  animation: icon-fauzan-3 4.6s;
-  animation-delay: 2.8s;
+  animation: icon-fauzan-3 4.3s;
+  animation-delay: 2.7s;
   animation-fill-mode:both;
 }
 @keyframes icon-fauzan-3 {
@@ -228,8 +228,8 @@ body {
 }
 
 #image-about-yosafat {
-  animation: Yosafat 3.5s;
-  animation-delay: 1.4s;
+  animation: Yosafat 3.3s;
+  animation-delay: 1.3s;
   animation-fill-mode:both;
 }
 @keyframes Yosafat {
@@ -243,8 +243,8 @@ body {
   }
 }
 #icon-yosafat-1 {
-  animation: icon-yosafat-1 4.0s;
-  animation-delay: 2.4s;
+  animation: icon-yosafat-1 3.7s;
+  animation-delay: 2.3s;
   animation-fill-mode:both;
 }
 @keyframes icon-yosafat-1 {
@@ -258,8 +258,8 @@ body {
   }
 }
 #icon-yosafat-2 {
-  animation: icon-yosafat-2 4.4s;
-  animation-delay: 2.6s;
+  animation: icon-yosafat-2 4.2s;
+  animation-delay: 2.5s;
   animation-fill-mode:both;
 }
 @keyframes icon-yosafat-2 {
@@ -273,8 +273,8 @@ body {
   }
 }
 #icon-yosafat-3 {
-  animation: icon-yosafat-3 4.8s;
-  animation-delay: 2.8s;
+  animation: icon-yosafat-3 4.6s;
+  animation-delay: 2.7s;
   animation-fill-mode:both;
 }
 @keyframes icon-yosafat-3 {
@@ -313,6 +313,12 @@ body {
 .bg-comment .closeAlert {
   cursor: pointer;
   color: red;
+}
+
+.bg-product {
+  background-color: #222831;
+  min-height: 100vh;
+  width: 100%;
 }
 
 /* Media Laptop */

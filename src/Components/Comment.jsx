@@ -15,17 +15,15 @@ const Comment = () => {
   username: username,
   nickname: nickname,
   comment: comment,
-}).then((result) => {
-  console.log(result)
+}).then(response => {
+  console.log(response)
 }).then(() => {
   setAlertMessage('Komentar telah berhasil dikirim!')
   setShowAlert(true)
 }).then(() => {
   setTimeout(() => {
     setShowAlert(false)
-  }, 2000)
-}).catch((error) => {
-  console.error(`code error ${error}`)
+  }, 3000)
 })
 }
 
@@ -37,15 +35,15 @@ const Comment = () => {
       <form action="/comment" method="post">
       { 
       showAlert && (
-          <Alert variant="success" className="d-flex align-items-center">{alertMessage}</Alert>
+          <Alert variant="success" className="d-flex align-items-center justify-content-center">{alertMessage}</Alert>
         )
       }
       <label htmlFor="username">Username:</label>
-      <input type="text" name="username" className="username mb-2" placeholder="your username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+      <input type="text" name="username" className="username mb-2" placeholder="your username" onChange={(e) => setUsername(e.target.value)}/>
       <label htmlFor="nickname">Nickname:</label>
-      <input type="text" name="nickname" className="nickname mb-2"  placeholder="your nickname" value={nickname} onChange={(e) => setNickname(e.target.value)}/>
+      <input type="text" name="nickname" className="nickname mb-2"  placeholder="your nickname" onChange={(e) => setNickname(e.target.value)}/>
       <label htmlFor="comment">Suggestion:</label>
-      <input type="text" name="comment" className="suggestion mb-2"  placeholder="your comment" value={comment} onChange={(e) => setComment(e.target.value)}/>
+      <input type="text" name="comment" className="suggestion mb-2"  placeholder="your comment" onChange={(e) => setComment(e.target.value)}/>
 
       <button type="submit" onClick={sendComment}className="bg-success btn-comment px-4 py-1 fw-bold">Send</button>
       </form>
