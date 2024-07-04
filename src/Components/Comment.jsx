@@ -20,13 +20,13 @@ const Comment = () => {
 }).then(() => {
   setAlertMessage('Komentar telah berhasil dikirim!')
   setShowAlert(true)
+}).then(() => {
+  setTimeout(() => {
+    setShowAlert(false)
+  }, 2000)
 }).catch((error) => {
   console.error(`code error ${error}`)
 })
-}
-
-const handleAlertClose = () => {
-  setShowAlert(false)
 }
 
   return (
@@ -37,7 +37,7 @@ const handleAlertClose = () => {
       <form action="/comment" method="post">
       { 
       showAlert && (
-          <Alert variant="success" className="d-flex align-items-center"><span className="d-flex align-items-center pe-2 fs-2 fw-semibold closeAlert" onClick={handleAlertClose}>&times;</span>{alertMessage}</Alert>
+          <Alert variant="success" className="d-flex align-items-center">{alertMessage}</Alert>
         )
       }
       <label htmlFor="username">Username:</label>
