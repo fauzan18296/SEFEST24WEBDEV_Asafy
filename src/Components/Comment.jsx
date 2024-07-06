@@ -17,7 +17,7 @@ const Comment = () => {
 
   const sendComment = (e) => {
     e.preventDefault()
-  axios.post('http://localhost:3000/comment', {
+  axios.post('https://localhost:3000/comment', {
   username: username,
   nickname: nickname,
   comment: comment
