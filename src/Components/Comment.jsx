@@ -1,5 +1,5 @@
 import {Container,Row,Col,Alert} from "react-bootstrap";
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import axios from "axios";
 
 const Comment = () => {
@@ -9,18 +9,25 @@ const Comment = () => {
   const [alertMessage, setAlertMessage] = useState('')
   const [showAlert, setShowAlert] = useState(false)
 
+  useEffect(() => {
+    console.log('Username:', username);
+    console.log('Nickname:', nickname);
+    console.log('Comment:', comment);
+  }, [username, nickname, comment]);
+
   const sendComment = (e) => {
     e.preventDefault()
   axios.post('http://localhost:3000/comment', {
   username: username,
   nickname: nickname,
-  comment: comment,
-}).then(response => {
+  comment: comment
+})
+.then(response => {
   console.log(response)
-}).then(() => {
+})
+.then(() => {
   setAlertMessage('Komentar telah berhasil dikirim!')
   setShowAlert(true)
-}).then(() => {
   setTimeout(() => {
     setShowAlert(false)
   }, 3000)
@@ -32,7 +39,7 @@ const Comment = () => {
    <Container className="d-flex justify-content-center align-items-center bg-form-container">
     <Row className="d-flex justify-content-center align-items-center pb-4 row-cols-lg-5 row-cols-2">
       <Col className="d-flex justify-content-center align-items-center pt-4">
-      <form action="/comment" method="post">
+      <form onSubmit={sendComment}>
       { 
       showAlert && (
           <Alert variant="success" className="d-flex align-items-center justify-content-center">{alertMessage}</Alert>
@@ -45,7 +52,7 @@ const Comment = () => {
       <label htmlFor="comment">Suggestion:</label>
       <input type="text" name="comment" className="suggestion mb-2"  placeholder="your comment" onChange={(e) => setComment(e.target.value)}/>
 
-      <button type="submit" onClick={sendComment}className="bg-success btn-comment px-4 py-1 fw-bold">Send</button>
+      <button type="submit" className="bg-success btn-comment px-4 py-1 fw-bold">Send</button>
       </form>
       </Col>
     </Row>  
