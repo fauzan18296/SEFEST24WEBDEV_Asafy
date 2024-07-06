@@ -15,9 +15,9 @@ const Comment = () => {
     console.log('Comment:', comment);
   }, [username, nickname, comment]);
 
-  const sendComment = async (e) => {
+  const sendComment = (e) => {
     e.preventDefault()
-  await axios.post('http://localhost:3000/comment', {
+  axios.post('sefest24webdevasafybackend-production.up.railway.app/comment', {
   username: username,
   nickname: nickname,
   comment: comment
