@@ -17,7 +17,7 @@ const Comment = () => {
 
   const sendComment = (e) => {
     e.preventDefault()
-  axios.post('https://sefest24webdevasafybackend-production.up.railway.app/comment', {
+  axios.post('http://sefest24webdevasafybackend-production.up.railway.app/comment', {
   username: username,
   nickname: nickname,
   comment: comment
